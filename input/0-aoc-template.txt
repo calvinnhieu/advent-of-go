@@ -1,0 +1,10 @@
+--SAMPLE INPUT FILE--
+
+Use this template to start a new AOC solution:
+
+1. Create a directory for the problem e.g. `advent-of-go/src/1`.
+2. Copy this file into your new directory and rename it following the convention <problem-#>-<problem-name>-<part-#>.go
+3. Create an input file under `advent-of-go/input` using a similar naming convention: <problem-#>-<problem-name>.txt
+4. Run `source environment` in the top level directory.
+5. Run `go run <my-aoc-solution>.go` and voila!
+
