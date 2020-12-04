@@ -4,12 +4,16 @@ package common
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
-// Returns the input file path given the absolute path of a solution file.
-func Input_file(src_path string) string {
+var ProblemName = map[int]string{
+	1: "report-repair",
+	2: "password-philosophy",
+	3: "toboggan-trajectory",
+}
+
+// Returns the input file path given the day of the problem.
+func Input_file(day int) string {
 	input_dir := os.Getenv("AOG_INPUT_DIR")
-	input_prefix := src_path[strings.LastIndex(src_path, "/") + 1:len(src_path) - 5]
-	return fmt.Sprintf("%s/%s.txt", input_dir, input_prefix)
+	return fmt.Sprintf("%s/%d-%s.txt", input_dir, day, ProblemName[day])
 }
