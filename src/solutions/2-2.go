@@ -33,7 +33,7 @@ func PasswordPhilosophyB() (func(string), func()) {
 
 	// Prints current closure state.
 	result := func() {
-		fmt.Printf("There are %d/%d valid passwords.\n", validCount, inputSize)
+		fmt.Printf("B: There are %d/%d valid passwords.\n", validCount, inputSize)
 	}
 
 	return processor, result
