@@ -9,7 +9,7 @@ import (
 
 // TODO: create Solution type
 var SolutionMap = map[int][]func()(func(string), func()){
-	1: []func()(func(string), func()){solutions.ReportRepairA, solutions.ReportRepairA},
+	1: []func()(func(string), func()){solutions.ReportRepairA, solutions.ReportRepairB},
 	2: []func()(func(string), func()){solutions.PasswordPhilosophyA, solutions.PasswordPhilosophyB},
 	3: []func()(func(string), func()){solutions.TobogganTrajectoryA, solutions.TobogganTrajectoryB},
 }
