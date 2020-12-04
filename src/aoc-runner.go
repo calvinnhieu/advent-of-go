@@ -22,8 +22,8 @@ func main() {
 	}
 	// TODO: add check to ensure solution exists for day
 	// TODO: retrieve correct solution given day
-	processorA, resultA := solutions.TobogganTrajectoryA()
-	processorB, resultB := solutions.TobogganTrajectoryB()
+	processorA, resultA := solutions.PasswordPhilosophyA()
+	processorB, resultB := solutions.PasswordPhilosophyB()
 
 	// Open input file.
 	file, err := os.Open(common.Input_file(day))
