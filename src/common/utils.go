@@ -4,12 +4,25 @@ package common
 import (
 	"fmt"
 	"os"
-	"strings"
+	"github.com/calvinnhieu/advent-of-go/src/solutions"
 )
 
-// Returns the input file path given the absolute path of a solution file.
-func Input_file(src_path string) string {
-	input_dir := os.Getenv("AOG_INPUT_DIR")
-	input_prefix := src_path[strings.LastIndex(src_path, "/") + 1:len(src_path) - 5]
-	return fmt.Sprintf("%s/%s.txt", input_dir, input_prefix)
+// TODO: create Solution type
+var SolutionMap = map[int][]func()(func(string), func()){
+	1: []func()(func(string), func()){solutions.ReportRepairA, solutions.ReportRepairB},
+	2: []func()(func(string), func()){solutions.PasswordPhilosophyA, solutions.PasswordPhilosophyB},
+	3: []func()(func(string), func()){solutions.TobogganTrajectoryA, solutions.TobogganTrajectoryB},
 }
+
+var ProblemName = map[int]string{
+	1: "report-repair",
+	2: "password-philosophy",
+	3: "toboggan-trajectory",
+}
+
+// Returns the input file path given the day of the problem.
+func Input_file(day int) string {
+	input_dir := os.Getenv("AOG_INPUT_DIR")
+	return fmt.Sprintf("%s/%d-%s.txt", input_dir, day, ProblemName[day])
+}
+
