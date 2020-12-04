@@ -12,12 +12,14 @@ var SolutionMap = map[int][]func()(func(string), func()){
 	1: []func()(func(string), func()){solutions.ReportRepairA, solutions.ReportRepairB},
 	2: []func()(func(string), func()){solutions.PasswordPhilosophyA, solutions.PasswordPhilosophyB},
 	3: []func()(func(string), func()){solutions.TobogganTrajectoryA, solutions.TobogganTrajectoryB},
+	4: []func()(func(string), func()){solutions.PassportProcessingA, solutions.PassportProcessingB},
 }
 
 var ProblemName = map[int]string{
 	1: "report-repair",
 	2: "password-philosophy",
 	3: "toboggan-trajectory",
+	4: "passport-processing",
 }
 
 // Returns the input file path given the day of the problem.
