@@ -4,7 +4,15 @@ package common
 import (
 	"fmt"
 	"os"
+	"github.com/calvinnhieu/advent-of-go/src/solutions"
 )
+
+// TODO: create Solution type
+var SolutionMap = map[int][]func()(func(string), func()){
+	// 1: []func()(func(string), func()){solutions.ReportRepairA, solutions.ReportRepairB},
+	2: []func()(func(string), func()){solutions.PasswordPhilosophyA, solutions.PasswordPhilosophyB},
+	3: []func()(func(string), func()){solutions.TobogganTrajectoryA, solutions.TobogganTrajectoryB},
+}
 
 var ProblemName = map[int]string{
 	1: "report-repair",
@@ -17,3 +25,4 @@ func Input_file(day int) string {
 	input_dir := os.Getenv("AOG_INPUT_DIR")
 	return fmt.Sprintf("%s/%d-%s.txt", input_dir, day, ProblemName[day])
 }
+
